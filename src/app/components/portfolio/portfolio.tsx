@@ -1,6 +1,6 @@
-import {portfolio} from '../../data/data';
-import PortfolioItem from '../portfolioItem/portfolioItem';
-import Title from '../title/title';
+import { portfolio } from "../../data/data";
+import PortfolioItem from "../portfolioItem/portfolioItem";
+import Title from "../title/title";
 
 const Portfolio = () => {
   return (

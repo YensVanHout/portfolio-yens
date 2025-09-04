@@ -1,12 +1,11 @@
-import type {Metadata} from "next";
-import {Karla} from "next/font/google";
+import type { Metadata } from "next";
+import { Karla } from "next/font/google";
 import "./globals.css";
-
 
 const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin"],
-  weight: "600"
+  weight: "600",
 });
 
 export const metadata: Metadata = {
@@ -15,17 +14,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-    <body
-      className={`${karla.className} antialiased`}
-    >
-    {children}
-    </body>
+      <body className={`${karla.className} antialiased`}>{children}</body>
     </html>
   );
 }

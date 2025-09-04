@@ -1,11 +1,10 @@
-"use client"
-import {BiHomeAlt, BiUser} from 'react-icons/bi';
-import {FiMail} from 'react-icons/fi';
-import {TfiGallery} from 'react-icons/tfi';
-import {MdOutlineTimeline} from 'react-icons/md';
-import Link from 'next/link';
-import {useEffect, useState} from "react";
-
+"use client";
+import { BiHomeAlt, BiUser } from "react-icons/bi";
+import { FiMail } from "react-icons/fi";
+import { TfiGallery } from "react-icons/tfi";
+import { MdOutlineTimeline } from "react-icons/md";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Navigation = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -18,47 +17,47 @@ const Navigation = () => {
       setWindowWidth(window.innerWidth);
     }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-
   return (
-    <nav className={`navigation fixed inset-x-0 mx-auto z-50 ${windowWidth < 768 ? "bottom-0" : "top-4"}`}>
-      <div
-        className="bg-orange-300/50 z-2 dark:bg-violet-300/50 h-[80px] backdrop-blur-xl md:rounded-md max-w-full md:max-w-[550px] mx-auto px-10 flex justify-between items-center text-3xl text-stone-900 dark:text-white">
+    <nav
+      className={`navigation fixed inset-x-0 mx-auto z-50 ${windowWidth < 768 ? "bottom-0" : "top-4"}`}
+    >
+      <div className="bg-violet-300/50 h-[80px] backdrop-blur-xl md:rounded-md max-w-full md:max-w-[550px] mx-auto px-10 flex justify-between items-center text-3xl text-white">
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#home"
         >
-          <BiHomeAlt/>
+          <BiHomeAlt />
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#about"
         >
-          <BiUser/>
+          <BiUser />
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#projects"
         >
-          <TfiGallery/>
+          <TfiGallery />
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#timeline"
         >
-          <MdOutlineTimeline/>
+          <MdOutlineTimeline />
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#contact"
         >
-          <FiMail/>
+          <FiMail />
         </Link>
       </div>
     </nav>

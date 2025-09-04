@@ -4,22 +4,20 @@ import Footer from "./components/footer/footer";
 import Intro from "./components/intro/intro";
 import Navigation from "./components/navigation/navigation";
 import Portfolio from "./components/portfolio/portfolio";
-import Skills from "./components/skills/skills";
 import Timeline from "./components/timeline/timeline";
 
 export default function Home() {
   return (
     <>
-      <Navigation/>
+      <Navigation />
       <div className="bg-slate-50 dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen --font-karla">
         <div className="max-w-5xl w-11/12 mx-auto">
-          <Intro/>
-          <About/>
-          {/* <Skills/> */}
-          <Portfolio/>
-          <Timeline/>
-          <Contact/>
-          <Footer/>
+          <Intro />
+          <About />
+          <Portfolio />
+          <Timeline />
+          <Contact />
+          <Footer />
         </div>
       </div>
     </>

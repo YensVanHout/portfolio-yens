@@ -1,10 +1,10 @@
 {
-	"configurations": [
-		{
-			"type": "npm",
-			"name": "npm configuration",
-			"command": "run",
-			"scripts": "dev"
-		}
-	]
+  "configurations": [
+    {
+      "type": "npm",
+      "name": "npm configuration",
+      "command": "run",
+      "scripts": "dev"
+    }
+  ]
 }

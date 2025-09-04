@@ -1,6 +1,6 @@
-import {timeline} from '../../data/data';
-import TimelineItem from '../timelineItem/timelineItem';
-import Title from '../title/title';
+import { timeline } from "../../data/data";
+import TimelineItem from "../timelineItem/timelineItem";
+import Title from "../title/title";
 
 const Timeline = () => {
   return (
