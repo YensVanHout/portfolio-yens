@@ -33,7 +33,7 @@ const About = () => {
             recusandae expedita saepe nisi explicabo.
           </p>
         </div>
-        <div className="w-full mb-4 md:mb-0 bg-red-300">
+        <div className="w-full flex items-center justify-center">
           <Image
             src={Me}
             alt="portrait of me"
