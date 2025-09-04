@@ -6,10 +6,9 @@ const spectral = Spectral({
   weight: "700",
 });
 
-const Title = ({ children, id }: titleProps) => {
+const Title = ({ children }: titleProps) => {
   return (
     <h1
-      id={id && id}
       className={`text-7xl font-bold uppercase py-8 mb-5 text-white text-center ${spectral.className} tracking-wide`}
     >
       {children}

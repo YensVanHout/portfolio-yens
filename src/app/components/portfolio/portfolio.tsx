@@ -15,7 +15,7 @@ const Portfolio = () => {
                 img={item.img}
                 stack={item.stack}
                 links={item.links}
-                key={"project-" + index}
+                key={`project-${index}`}
               />
             );
           })}

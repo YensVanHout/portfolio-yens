@@ -9,7 +9,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
       <Image
         height={0}
         width={300}
-        style={{ objectFit: "contain" }}
+        style={{ objectFit: "fill", minHeight: "180px" }}
         src={img.imgUrl}
         alt={img.alt}
         className="object-cover border-b-2 border-white"
