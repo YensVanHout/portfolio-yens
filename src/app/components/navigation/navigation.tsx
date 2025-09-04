@@ -28,7 +28,7 @@ const Navigation = () => {
     <nav
       className={`navigation fixed inset-x-0 mx-auto z-50 ${windowWidth < 768 ? "bottom-0" : "top-4"}`}
     >
-      <div className="bg-violet-300/50 h-[80px] backdrop-blur-xl md:rounded-md max-w-full md:max-w-[550px] mx-auto px-10 flex justify-between items-center text-3xl text-white">
+      <div className="bg-blue-200/25 h-[80px] backdrop-blur-xl md:rounded-md max-w-full md:max-w-[550px] mx-auto px-10 flex justify-between items-center text-3xl text-white">
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#home"
@@ -37,15 +37,15 @@ const Navigation = () => {
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
-          href="#about"
-        >
-          <BiUser />
-        </Link>
-        <Link
-          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#projects"
         >
           <TfiGallery />
+        </Link>
+        <Link
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
+          href="#about"
+        >
+          <BiUser />
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"

@@ -13,8 +13,8 @@ export default function Home() {
       <div className="bg-slate-50 dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen --font-karla">
         <div className="max-w-5xl w-11/12 mx-auto">
           <Intro />
-          <About />
           <Portfolio />
+          <About />
           <Timeline />
           <Contact />
           <Footer />

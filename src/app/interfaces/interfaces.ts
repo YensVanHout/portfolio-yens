@@ -19,11 +19,6 @@ export interface timelineProps {
 }
 
 export interface titleProps {
-  id?: any;
   children?: any;
-}
-
-export interface skillProps {
-  name: string;
-  skill: number;
+  styling?: string;
 }
