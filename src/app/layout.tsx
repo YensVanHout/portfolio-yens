@@ -20,6 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta property="og:title" content="Yens Van Hout | Portfolio" />
+        <meta property="og:description" content="Portfolio for Yens Van Hout" />
+      </head>
       <body className={`${karla.className} antialiased`}>{children}</body>
     </html>
   );
