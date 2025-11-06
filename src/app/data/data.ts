@@ -88,3 +88,5 @@ export const skills = {
 };
 
 export const currentlyLearning = "Java";
+
+export const lastUpdated = "2025-11-06";

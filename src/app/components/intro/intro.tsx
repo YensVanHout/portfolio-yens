@@ -1,8 +1,7 @@
-import { BiMouse } from "react-icons/bi";
-import { IoIosArrowDown } from "react-icons/io";
 import Title from "../title/title";
 import Me from "@/assets/me.webp";
 import Image from "next/image";
+import { lastUpdated } from "../../data/data";
 
 const getAge = () => {
   var today = new Date();
@@ -15,6 +14,15 @@ const getAge = () => {
   return age;
 };
 
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+
 const Intro = () => {
   return (
     <div id="home">
@@ -25,6 +33,10 @@ const Intro = () => {
           </Title>
           <p className="text-base md:text-4xl mb-3 font-medium uppercase">
             Software & Web Developer
+          </p>
+
+          <p className="text-xs text-stone-600 dark:text-stone-400 mb-3">
+            Last updated: {formatDate(lastUpdated)}
           </p>
           <p className="text-xs md:text-sm max-w-xl my-12 font-bold whitespace-pre-wrap">
             {`I'm Yens, a developer from Antwerp, Belgium.\nI'm ${getAge()} years old and ready to dive into my first professional role.\nLet's build something great together.`}
