@@ -1,5 +1,5 @@
 "use client";
-import { BiHomeAlt, BiUser } from "react-icons/bi";
+import { BiHomeAlt, BiUser, BiCodeAlt } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
 import { TfiGallery } from "react-icons/tfi";
 import { MdOutlineTimeline } from "react-icons/md";
@@ -46,6 +46,12 @@ const Navigation = () => {
           href="#about"
         >
           <BiUser />
+        </Link>
+        <Link
+          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          href="#skills"
+        >
+          <BiCodeAlt />
         </Link>
         <Link
           className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"

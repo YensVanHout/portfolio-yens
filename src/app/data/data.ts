@@ -58,20 +58,33 @@ export const timeline = [
   {
     year: "2025 - 2025",
     title: "Java course at VDAB",
-    duration: "",
+    duration: "1 year",
     details:
       "In 2025 I started my Java course at VDAB. I learned the basics of Java and how to use it to create console applications. I also learned how to use Spring Boot and JPA to create web applications. During this time I was part of a Scrum team, where we developed an application for warehouses to help with picking orders and processing incoming deliveries.",
   },
 ];
 
-export const skills = [
-  { name: "HTML/CSS/JS", skill: 80 },
-  { name: "TypeScript", skill: 70 },
-  { name: "VueJS", skill: 75 },
-  { name: "ReactJS", skill: 65 },
-  { name: "Python", skill: 50 },
-  { name: "C#", skill: 40 },
-  { name: "Java", skill: 60 },
-];
+export const skills = {
+  languages: [
+    {
+      name: "HTML/CSS/JS/TS",
+      skill: 80,
+      frameworks: [
+        { name: "VueJS", skill: 75 },
+        { name: "ReactJS", skill: 65 },
+      ],
+    },
+    { name: "Python", skill: 50 },
+    { name: "C#", skill: 40 },
+    {
+      name: "Java",
+      skill: 60,
+      frameworks: [
+        { name: "Spring Boot", skill: 60 },
+        { name: "JPA", skill: 55 },
+      ],
+    },
+  ],
+};
 
 export const currentlyLearning = "Java";
