@@ -9,7 +9,7 @@ const spectral = Spectral({
 const Title = ({ children, styling }: titleProps) => {
   return (
     <h1
-      className={`text-7xl font-bold uppercase py-8 mb-5 text-white text-center ${spectral.className} tracking-wide ${styling}`}
+      className={`text-7xl font-bold uppercase py-8 mb-5 text-stone-900 dark:text-white text-center ${spectral.className} tracking-wide ${styling}`}
     >
       {children}
     </h1>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="py-5 sm:pb-26 md:pb-6 text-center">
@@ -48,6 +50,30 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <p className="text-sm my-4 opacity-50">
+          Built with{" "}
+          <Link
+            href="https://react.dev/"
+            className="text-white font-black hover:underline"
+          >
+            React
+          </Link>
+          <br />
+          Coded with{" "}
+          <Link
+            href="https://nextjs.org/"
+            className="text-white font-black hover:underline"
+          >
+            Next.js
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://tailwindcss.com/"
+            className="text-white font-black hover:underline"
+          >
+            Tailwind CSS
+          </Link>
+        </p>
       </div>
       <p className="text-sm mt-2 opacity-50">
         &copy; {new Date().getFullYear()} Yens Van Hout. All rights reserved.

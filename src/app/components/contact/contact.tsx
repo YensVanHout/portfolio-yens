@@ -39,7 +39,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-stone-900 bg-white"
+            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-white dark:text-stone-900 bg-stone-900 dark:bg-white"
           >
             Get in touch
           </button>

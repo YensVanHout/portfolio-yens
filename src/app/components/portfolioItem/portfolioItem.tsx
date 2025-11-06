@@ -5,24 +5,24 @@ import type { portfolioItemProps } from "../../interfaces/interfaces";
 
 const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
   return (
-    <div className="border-2  rounded-md overflow-hidden border-white flex flex-col justify-between">
+    <div className="border-2  rounded-md overflow-hidden border-stone-900 dark:border-white flex flex-col justify-between">
       <Image
         height={0}
         width={300}
         style={{ objectFit: "fill", minHeight: "180px" }}
         src={img.imgUrl}
         alt={img.alt}
-        className="object-cover border-b-2 border-white"
+        className="object-cover border-b-2 border-stone-900 dark:border-white"
       />
       <div className="w-full p-4">
-        <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold text-white text-center">
+        <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold dark;text-white text-center">
           {title}
         </h3>
         <p className="flex flex-wrap gap-2 flex-row items-center justify-center text-xs md:text-sm">
           {stack.map((item) => {
             return (
               <span
-                className="inline-block px-2 py-1 font-semibold border-2 rounded-md bg-white text-stone-900"
+                className="inline-block px-2 py-1 font-semibold border-2 rounded-md bg-stone-900 dark:bg-white text-white dark:text-stone-900"
                 key={`"stack-"${item}`}
               >
                 {item}
@@ -31,7 +31,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           })}{" "}
         </p>
       </div>
-      <div className="w-full p-4 border-t-2 border-white flex justify-around font-semibold bg-white relative bottom-0">
+      <div className="w-full p-4 border-t-2 dark:border-white flex justify-around font-semibold bg-white relative bottom-0">
         {links.github ? (
           <Link
             className="hover:underline text-stone-900"

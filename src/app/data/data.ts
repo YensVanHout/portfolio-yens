@@ -56,11 +56,11 @@ export const timeline = [
       "My journey at AP Hogeschool was quite the rollercoaster. From learning C# to how to use frameworks such as ReactJS and VueJS. I also have learned how to make mobile apps using React Native. Using WordPress is also one of the skills I gathered during this time. For my internship I joined the Inuits BVBA team as a software developer. This was an amazing experience, I learned so much from the people around me during this time. I helped with the frontend for a digital asset management system. Within this project I helped with the filter functionality.",
   },
   {
-    year: "Present",
-    title: "Currently looking for work",
+    year: "2025 - 2025",
+    title: "Java course at VDAB",
     duration: "",
     details:
-      "I started my journey as a profesional developer. Hopefully I'll be able to start a job soon to continue developing and learning new things from the people around me.",
+      "In 2025 I started my Java course at VDAB. I learned the basics of Java and how to use it to create console applications. I also learned how to use Spring Boot and JPA to create web applications. During this time I was part of a Scrum team, where we developed an application for warehouses to help with picking orders and processing incoming deliveries.",
   },
 ];
 
