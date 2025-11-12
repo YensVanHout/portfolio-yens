@@ -1,16 +1,43 @@
 "use client";
+import { useState } from "react";
 import Title from "../title/title";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null,
+  );
+  const [statusMessage, setStatusMessage] = useState("");
+
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    await fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
-    });
-    // Success and error handling ...
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setStatusMessage("");
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setStatusMessage("Thank you! Your message has been sent successfully.");
+        (event.currentTarget as HTMLFormElement).reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+      setStatusMessage(
+        "Sorry, there was an error sending your message. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,12 +76,29 @@ const Contact = () => {
             placeholder="Message..."
             rows={10}
             className="p-2 mb-4 bg-transparent border-2 rounded-md"
+            disabled={isSubmitting}
           />
+          {submitStatus && (
+            <div
+              className={`mb-4 p-3 rounded-md text-center ${
+                submitStatus === "success"
+                  ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
+                  : "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200"
+              }`}
+            >
+              {statusMessage}
+            </div>
+          )}
           <button
             type="submit"
-            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-white dark:text-stone-900 bg-stone-900 dark:bg-white"
+            disabled={isSubmitting}
+            className={`inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-white dark:text-stone-900 bg-stone-900 dark:bg-white transition-opacity ${
+              isSubmitting
+                ? "opacity-50 cursor-not-allowed"
+                : "cursor-pointer hover:bg-stone-800 dark:hover:bg-stone-100"
+            }`}
           >
-            Get in touch
+            {isSubmitting ? "Sending..." : "Get in touch"}
           </button>
         </form>
       </div>
