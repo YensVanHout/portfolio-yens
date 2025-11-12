@@ -1,13 +1,27 @@
+"use client";
 import Title from "../title/title";
+
+
+export function FeedbackForm() {
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    await fetch("/__forms.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+    // Success and error handling ...
+  };
+
 
 const Contact = () => {
   return (
     <div className="flex flex-col mb-10 mx-auto" id="contact">
       <div className="flex justify-center items-center">
         <form
-          method="POST"
-          data-netlify="true"
           name="contact"
+          onSubmit={handleFormSubmit}
           className="flex flex-col w-full md:w-9/12"
         >
           <input type="hidden" name="form-name" value="contact" />
