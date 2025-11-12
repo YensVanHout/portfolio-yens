@@ -10,6 +10,7 @@ const Contact = () => {
           name="contact"
           className="flex flex-col w-full md:w-9/12"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <Title>Contact</Title>
           <label htmlFor="name" className="text-xl pb-1">
             Name:{" "}
