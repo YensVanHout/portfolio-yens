@@ -4,7 +4,12 @@ const Contact = () => {
   return (
     <div className="flex flex-col mb-10 mx-auto" id="contact">
       <div className="flex justify-center items-center">
-        <form netlify className="flex flex-col w-full md:w-9/12">
+        <form
+          method="POST"
+          data-netlify="true"
+          name="contact"
+          className="flex flex-col w-full md:w-9/12"
+        >
           <Title>Contact</Title>
           <label htmlFor="name" className="text-xl pb-1">
             Name:{" "}
