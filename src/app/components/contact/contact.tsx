@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="flex flex-col mb-10 mx-auto" id="contact">
       <div className="flex justify-center items-center">
         <form
-          action="https://getform.io/f/c8e75e34-a1ea-4dba-a366-d8a4d8b1f79f"
+          action="https://getform.io/f/bejewmwa"
           method="POST"
           className="flex flex-col w-full md:w-9/12"
         >
