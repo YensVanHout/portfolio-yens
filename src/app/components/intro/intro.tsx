@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BiDownload } from "react-icons/bi";
 import Title from "../title/title";
 import Me from "@/assets/me.webp";
 import Image from "next/image";
@@ -69,6 +70,14 @@ const Intro = () => {
               Last updated: {lastCommitDate}
             </p>
           )}
+          <a
+            href="/assets/cv-vanhout-yens.pdf"
+            download="cv-vanhout-yens.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 text-base font-medium rounded-md text-white dark:text-stone-900 bg-stone-900 dark:bg-white hover:bg-stone-800 dark:hover:bg-stone-100 transition-colors"
+          >
+            <BiDownload className="text-lg" />
+            Download Resume
+          </a>
           <p className="text-xs md:text-sm max-w-xl my-12 font-bold whitespace-pre-wrap">
             {`I'm Yens, a developer from Antwerp, Belgium.\nI'm ${getAge()} years old and ready to dive into my first professional role.\nLet's build something great together.`}
           </p>
