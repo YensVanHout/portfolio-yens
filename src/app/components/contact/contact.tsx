@@ -1,21 +1,18 @@
 "use client";
 import Title from "../title/title";
 
-
-export function FeedbackForm() {
-  const handleFormSubmit = async (event) => {
+const Contact = () => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
     await fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams(formData as any).toString(),
     });
     // Success and error handling ...
   };
 
-
-const Contact = () => {
   return (
     <div className="flex flex-col mb-10 mx-auto" id="contact">
       <div className="flex justify-center items-center">
