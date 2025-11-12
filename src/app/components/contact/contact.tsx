@@ -20,7 +20,9 @@ const Contact = () => {
       const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: new URLSearchParams(
+          formData as unknown as Record<string, string>,
+        ).toString(),
       });
 
       if (response.ok) {
@@ -30,7 +32,7 @@ const Contact = () => {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
       setStatusMessage(
         "Sorry, there was an error sending your message. Please try again.",
@@ -58,6 +60,7 @@ const Contact = () => {
             name="name"
             placeholder="Name"
             className="p-2 bg-transparent border-2 rounded-md mb-4"
+            disabled={isSubmitting}
           />
           <label htmlFor="email" className="text-xl pb-1">
             E-Mail:{" "}
@@ -67,6 +70,7 @@ const Contact = () => {
             name="email"
             placeholder="Email"
             className="p-2 bg-transparent border-2 rounded-md mb-4"
+            disabled={isSubmitting}
           />
           <label htmlFor="Message" className="text-xl pb-1">
             Message:{" "}
