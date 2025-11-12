@@ -25,14 +25,18 @@ const Contact = () => {
         ).toString(),
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         setSubmitStatus("success");
         setStatusMessage("Thank you! Your message has been sent successfully.");
         (event.currentTarget as HTMLFormElement).reset();
       } else {
-        throw new Error("Failed to send message");
+        setSubmitStatus("error");
+        setStatusMessage(
+          "Sorry, there was an error sending your message. Please try again.",
+        );
       }
-    } catch {
+    } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
       setStatusMessage(
         "Sorry, there was an error sending your message. Please try again.",
