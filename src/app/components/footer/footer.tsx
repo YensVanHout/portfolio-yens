@@ -51,6 +51,7 @@ const Footer = () => {
         <p className="text-sm my-4 opacity-50">
           Built with{" "}
           <Link
+            aria-label="Link to the official page of React"
             href="https://react.dev/"
             className="text-white font-black hover:underline"
           >
@@ -59,6 +60,7 @@ const Footer = () => {
           <br />
           Coded with{" "}
           <Link
+            aria-label="Link to the official page of Next.js"
             href="https://nextjs.org/"
             className="text-white font-black hover:underline"
           >
@@ -66,6 +68,7 @@ const Footer = () => {
           </Link>{" "}
           and{" "}
           <Link
+            aria-label="Link to the official page of Tailwind CSS"
             href="https://tailwindcss.com/"
             className="text-white font-black hover:underline"
           >

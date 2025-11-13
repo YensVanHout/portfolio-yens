@@ -9,7 +9,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
       <Image
         height={0}
         width={300}
-        style={{ objectFit: "fill", minHeight: "180px" }}
+        style={{ objectFit: "fill", minHeight: "180px", width: "auto" }}
         src={img.imgUrl}
         alt={img.alt}
         className="object-cover border-b-2 border-stone-900 dark:border-white"
@@ -34,6 +34,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
       <div className="w-full p-4 border-t-2 dark:border-white flex justify-around font-semibold bg-white relative bottom-0">
         {links.github ? (
           <Link
+            aria-label="Link to the GitHub repository of the project"
             className="hover:underline text-stone-900"
             target="_blank"
             href={links.github}
@@ -42,13 +43,14 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           </Link>
         ) : null}
         {links.website ? (
-          <a
+          <Link
+            aria-label="Link to the website of the project"
             className="hover:underline text-stone-900"
             target="_blank"
             href={links.website}
           >
             Website
-          </a>
+          </Link>
         ) : null}
       </div>
     </div>
