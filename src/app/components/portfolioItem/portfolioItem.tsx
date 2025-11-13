@@ -22,7 +22,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           {stack.map((item) => {
             return (
               <span
-                className="inline-block px-2 py-1 font-semibold border-2 border-violet-500 rounded-md bg-violet-400 text-black"
+                className="inline-block px-2 py-1 font-semibold border-3 border-violet-500 rounded-md bg-stone-900 dark:bg-white text-white dark:text-stone-900"
                 key={`"stack-"${item}`}
               >
                 {item}

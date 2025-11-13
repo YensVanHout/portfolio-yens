@@ -40,7 +40,7 @@ const Skills = () => {
         {skills.languages.map((language) => (
           <div
             key={language.name}
-            className="w-full p-6 rounded-lg bg-stone-900 dark:bg-white"
+            className="w-full p-6 rounded-lg bg-stone-900 dark:bg-stone-100"
           >
             <div className="mb-2 flex items-center gap-3">
               <div className="text-3xl">{getLanguageIcon(language.name)}</div>

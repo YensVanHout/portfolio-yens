@@ -64,7 +64,7 @@ const Intro = () => {
           <a
             href="/assets/cv-vanhout-yens.pdf"
             download="cv-vanhout-yens.pdf"
-            className="inline-flex items-center gap-2 px-6 py-3 mt-4 text-base font-medium rounded-md text-black bg-violet-400 hover:bg-violet-500 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 text-base font-medium rounded-md border-5 border-solid border-violet-400 text-white bg-stone-900 hover:bg-stone-900/50 dark:bg-white dark:hover:bg-stone-300  dark:text-black transition-colors"
           >
             <BiDownload className="text-lg" />
             Download my CV

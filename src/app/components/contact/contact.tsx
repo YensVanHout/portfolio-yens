@@ -58,7 +58,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-black bg-violet-400 hover:bg-violet-500"
+            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto border-5 border-solid border-violet-400 text-white bg-stone-900 hover:bg-stone-900/50 dark:bg-white dark:hover:bg-stone-300  dark:text-black"
           >
             Get in touch
           </button>
