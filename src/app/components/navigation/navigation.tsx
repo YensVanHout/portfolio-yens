@@ -28,45 +28,45 @@ const Navigation = () => {
     <nav
       className={`navigation fixed inset-x-0 mx-auto z-50 ${windowWidth < 768 ? "bottom-0" : "top-4"}`}
     >
-      <div className="bg-stone-600/60 dark:bg-blue-200/25 h-[80px] backdrop-blur-xl md:rounded-md max-w-full md:max-w-[550px] mx-auto px-10 flex justify-between items-center text-3xl text-white">
+      <div className="bg-violet-400/60  h-[80px] backdrop-blur-xl md:rounded-md max-w-full md:max-w-[550px] mx-auto px-10 flex justify-between items-center text-3xl text-stone-900/80 dark:text-stone-200/80">
         <Link
           aria-label="Scroll back to the top of the page"
-          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#home"
         >
           <BiHomeAlt />
         </Link>
         <Link
           aria-label="Scroll to the projects section"
-          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#projects"
         >
           <TfiGallery />
         </Link>
         <Link
           aria-label="Scroll to the about section"
-          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#about"
         >
           <BiUser />
         </Link>
         <Link
           aria-label="Scroll to the skills section"
-          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#skills"
         >
           <BiCodeAlt />
         </Link>
         <Link
           aria-label="Scroll to the timeline section"
-          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#timeline"
         >
           <MdOutlineTimeline />
         </Link>
         <Link
           aria-label="Scroll to the contact section"
-          className="cursor-pointer w-[72px] h-[72px] text-white/60 flex items-center justify-center z-50"
+          className="cursor-pointer w-[72px] h-[72px] flex items-center justify-center z-50"
           href="#contact"
         >
           <FiMail />

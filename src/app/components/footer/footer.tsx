@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center gap-2">
             <a
               href="https://www.linkedin.com/in/yens-van-hout-199478211/"
-              className="bg-black dark:bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
+              className="bg-black dark:bg-custom-main p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
               aria-label="LinkedIn profile of Yens Van Hout"
             >
               <svg
@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/YensVanHout"
-              className="bg-black dark:bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
+              className="bg-black dark:bg-custom-main p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
               aria-label="GitHub profile of Yens Van Hout"
             >
               <svg

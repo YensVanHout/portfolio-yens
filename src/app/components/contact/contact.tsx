@@ -1,5 +1,5 @@
 "use client";
-import Title from "../title/title";
+import Title from "../ui/title";
 
 const Contact = () => {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -58,7 +58,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto border-5 border-solid border-violet-400 text-white bg-custom-dark hover:bg-custom-dark/50 dark:bg-white dark:hover:bg-stone-300  dark:text-black"
+            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto border-5 border-solid border-violet-400 text-white bg-custom-dark hover:bg-custom-dark/50 dark:bg-white dark:hover:bg-custom-main  dark:text-black"
           >
             Get in touch
           </button>

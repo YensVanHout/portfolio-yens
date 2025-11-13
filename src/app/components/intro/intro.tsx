@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BiDownload } from "react-icons/bi";
-import Title from "../title/title";
+import Title from "../ui/title";
 import Me from "@/assets/me.webp";
 import Image from "next/image";
 
@@ -57,14 +57,14 @@ const Intro = () => {
           </p>
 
           {lastCommitDate && lastCommitDate !== null && (
-            <p className="text-xs text-stone-600 dark:text-stone-400 mb-3">
+            <p className="text-xs text-stone-700 dark:text-custom-main mb-3">
               Last updated: {lastCommitDate}
             </p>
           )}
           <a
             href="/assets/cv-vanhout-yens.pdf"
             download="cv-vanhout-yens.pdf"
-            className="inline-flex items-center gap-2 px-6 py-3 mt-4 text-base font-medium rounded-md border-5 border-solid border-violet-400 text-white bg-custom-dark hover:bg-custom-dark/50 dark:bg-white dark:hover:bg-stone-300  dark:text-black transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 mt-4 text-base font-medium rounded-md border-5 border-solid border-violet-400 text-white bg-custom-dark hover:bg-custom-dark/50 dark:bg-white dark:hover:bg-custom-main  dark:text-black transition-colors"
           >
             <BiDownload className="text-lg" />
             Download my CV

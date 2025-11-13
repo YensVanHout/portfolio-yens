@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Title from "../title/title";
+import Title from "../ui/title";
 import Me from "@/assets/me.webp";
 const About = () => {
   return (
