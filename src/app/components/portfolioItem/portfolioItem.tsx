@@ -5,14 +5,14 @@ import type { portfolioItemProps } from "../../interfaces/interfaces";
 
 const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
   return (
-    <div className="border-2  rounded-md overflow-hidden border-stone-900 dark:border-white flex flex-col justify-between">
+    <div className="border-2  rounded-md overflow-hidden border-custom-dark dark:border-white flex flex-col justify-between">
       <Image
         height={0}
         width={300}
         style={{ objectFit: "fill", minHeight: "180px", width: "auto" }}
         src={img.imgUrl}
         alt={img.alt}
-        className="object-cover border-b-2 border-stone-900 dark:border-white"
+        className="object-cover border-b-2 border-custom-dark dark:border-white"
       />
       <div className="w-full p-4">
         <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold dark;text-white text-center">
@@ -22,7 +22,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           {stack.map((item) => {
             return (
               <span
-                className="inline-block px-2 py-1 font-semibold border-3 border-violet-500 rounded-md bg-stone-900 dark:bg-white text-white dark:text-stone-900"
+                className="inline-block px-2 py-1 font-semibold border-3 border-violet-500 rounded-md bg-custom-dark dark:bg-white text-white dark:text-custom-dark"
                 key={`"stack-"${item}`}
               >
                 {item}
@@ -35,7 +35,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
         {links.github ? (
           <Link
             aria-label="Link to the GitHub repository of the project"
-            className="hover:underline text-white dark:text-stone-900"
+            className="hover:underline text-white dark:text-custom-dark"
             target="_blank"
             href={links.github}
           >
@@ -45,7 +45,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
         {links.website ? (
           <Link
             aria-label="Link to the website of the project"
-            className="hover:underline text-white dark:text-stone-900"
+            className="hover:underline text-white dark:text-custom-dark"
             target="_blank"
             href={links.website}
           >

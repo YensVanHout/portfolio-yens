@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <div className="bg-slate-50 dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen --font-karla">
+      <div className="bg-slate-50 dark:bg-custom-dark text-custom-dark dark:text-stone-300 min-h-screen --font-karla">
         <div className="max-w-5xl w-11/12 mx-auto">
           <Intro />
           <Portfolio />
