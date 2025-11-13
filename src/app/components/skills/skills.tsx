@@ -129,9 +129,11 @@ const Skills = () => {
                     ) : (
                       // Render regular ecosystems for other skills
                       <>
-                        <h4 className="text-sm font-semibold dark:text-stone-700 text-custom-main mb-3 uppercase tracking-wide">
-                          Ecosystems
-                        </h4>
+                        {skill.subtitle && (
+                          <h4 className="text-sm font-semibold dark:text-stone-700 text-custom-main mb-3 uppercase tracking-wide">
+                            {skill.subtitle}
+                          </h4>
+                        )}
                         <div className="flex flex-col gap-4">
                           {skill.ecosystems.map((ecosystem) => (
                             <div key={`${skill.name}-${ecosystem.name}`}>
