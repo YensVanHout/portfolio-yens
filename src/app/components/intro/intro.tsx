@@ -42,14 +42,6 @@ const Intro = () => {
       .catch((error) => {
         console.error("Error fetching date:", error);
         // Fallback to the static date from data.ts
-        const date = new Date(lastUpdated);
-        setLastCommitDate(
-          date.toLocaleDateString(undefined, {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }),
-        );
       });
   }, []);
 
@@ -64,7 +56,7 @@ const Intro = () => {
             Software- & Web Developer
           </p>
 
-          {lastCommitDate && (
+          {lastCommitDate && lastCommitDate !== null && (
             <p className="text-xs text-stone-600 dark:text-stone-400 mb-3">
               Last updated: {lastCommitDate}
             </p>
