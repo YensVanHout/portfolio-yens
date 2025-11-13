@@ -9,14 +9,14 @@ const TimelineItem = ({ year, title, duration, details }: timelineProps) => {
           <span className="inline-block px-2 py-1 font-semibold border-3 border-solid border-violet-400 text-white dark:text-black bg-custom-dark dark:bg-white rounded-md">
             {year}
           </span>
-          <span className="text-lg font-semibold text-custom-dark textdark:text-white">
+          <span className="text-lg font-semibold text-custom-dark dark:text-white">
             {title}
           </span>
           <span className="my-1 text-sm font-normal leading-none text-stone-500">
             {duration}
           </span>
         </p>
-        <p className="my-2 text-base font-normal text-custom-dark dark:text-custom-main">
+        <p className="my-2 text-base font-normal text-custom-dark dark:text-custom-main ">
           {details}
         </p>
       </li>
