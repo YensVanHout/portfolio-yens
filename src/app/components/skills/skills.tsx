@@ -5,7 +5,7 @@ import { FaJava } from "react-icons/fa";
 import { SiJavascript, SiPython } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { BiChevronDown } from "react-icons/bi";
-import { skills } from "../../data/data";
+import { skills, currentlyLearning } from "../../data/data";
 import Title from "../ui/title";
 
 const getLanguageIcon = (languageName: string) => {
@@ -158,6 +158,18 @@ const Skills = () => {
           );
         })}
       </div>
+      {currentlyLearning && (
+        <div className="flex justify-center mt-8">
+          <div className="inline-block px-6 py-3 rounded-full bg-custom-dark dark:bg-stone-100">
+            <p className="text-base font-medium text-stone-200 dark:text-stone-800 text-center">
+              Currently learning:{" "}
+              <span className="font-semibold text-stone-100 dark:text-stone-700">
+                {currentlyLearning}
+              </span>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
