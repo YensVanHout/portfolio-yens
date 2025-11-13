@@ -69,7 +69,7 @@ export const skills = {
     {
       name: "HTML/CSS/JS/TS",
       skill: 80,
-      frameworks: [
+      ecosystems: [
         { name: "VueJS", skill: 75 },
         { name: "ReactJS", skill: 65 },
       ],
@@ -79,14 +79,12 @@ export const skills = {
     {
       name: "Java",
       skill: 60,
-      frameworks: [
+      ecosystems: [
         { name: "Spring Boot", skill: 60 },
-        { name: "JPA", skill: 55 },
+        { name: "JPA", altText: "Hibernate", skill: 55 },
       ],
     },
   ],
 };
 
 export const currentlyLearning = "Java";
-
-export const lastUpdated = "2025-11-06";

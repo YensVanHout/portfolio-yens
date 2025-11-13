@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center gap-2">
             <a
               href="https://www.linkedin.com/in/yens-van-hout-199478211/"
-              className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
+              className="bg-black dark:bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
               aria-label="LinkedIn profile of Yens Van Hout"
             >
               <svg
@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/YensVanHout"
-              className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
+              className="bg-black dark:bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
               aria-label="GitHub profile of Yens Van Hout"
             >
               <svg
@@ -53,16 +53,16 @@ const Footer = () => {
           <Link
             aria-label="Link to the official page of React"
             href="https://react.dev/"
-            className="text-white font-black hover:underline"
+            className="text-black dark:text-white font-black hover:underline"
           >
             React
           </Link>
           <br />
-          Coded with{" "}
+          Using{" "}
           <Link
             aria-label="Link to the official page of Next.js"
             href="https://nextjs.org/"
-            className="text-white font-black hover:underline"
+            className="text-black dark:text-white font-black hover:underline"
           >
             Next.js
           </Link>{" "}
@@ -70,7 +70,7 @@ const Footer = () => {
           <Link
             aria-label="Link to the official page of Tailwind CSS"
             href="https://tailwindcss.com/"
-            className="text-white font-black hover:underline"
+            className="text-black dark:text-white font-black hover:underline"
           >
             Tailwind CSS
           </Link>

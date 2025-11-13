@@ -22,14 +22,14 @@ const getLanguageIcon = (languageName: string) => {
   return iconMap[languageName] || null;
 };
 
-const getFrameworkIcon = (frameworkName: string) => {
+const getEcosystemIcon = (ecosystemName: string) => {
   const iconMap: { [key: string]: ReactElement } = {
     VueJS: <SiVuedotjs className="text-green-500" />,
     ReactJS: <SiReact className="text-blue-500" />,
     "Spring Boot": <SiSpring className="text-green-600" />,
     JPA: <SiHibernate className="text-orange-500" />,
   };
-  return iconMap[frameworkName] || null;
+  return iconMap[ecosystemName] || null;
 };
 
 const Skills = () => {
@@ -48,32 +48,32 @@ const Skills = () => {
                 {language.name}
               </h3>
             </div>
-            <div className="w-full dark:bg-stone-200 bg-stone-700 rounded-full h-3 mb-4">
+            <div className="w-full bg-white dark:bg-stone-300 rounded-full h-3 mb-4">
               <div
-                className="dark:bg-stone-900 bg-stone-100 h-3 rounded-full transition-all duration-500"
+                className="bg-violet-500 h-3 rounded-full transition-all duration-500"
                 style={{ width: `${language.skill}%` }}
               />
             </div>
-            {language.frameworks && language.frameworks.length > 0 && (
+            {language.ecosystems && language.ecosystems.length > 0 && (
               <div className="mt-4 pl-4 border-l-2 dark:border-stone-300 border-stone-600">
                 <h4 className="text-sm font-semibold dark:text-stone-600 text-stone-400 mb-3 uppercase tracking-wide">
-                  Frameworks
+                  Ecosystems
                 </h4>
                 <div className="flex flex-col gap-4">
-                  {language.frameworks.map((framework) => (
-                    <div key={`${language.name}-${framework.name}`}>
+                  {language.ecosystems.map((ecosystem) => (
+                    <div key={`${language.name}-${ecosystem.name}`}>
                       <div className="mb-1 flex items-center gap-3">
                         <div className="text-2xl">
-                          {getFrameworkIcon(framework.name)}
+                          {getEcosystemIcon(ecosystem.name)}
                         </div>
                         <span className="text-base font-medium dark:text-stone-800 text-stone-200">
-                          {framework.name}
+                          {ecosystem.name}
                         </span>
                       </div>
-                      <div className="w-full dark:bg-stone-200 bg-stone-700 rounded-full h-2">
+                      <div className="w-full bg-white dark:bg-stone-300 rounded-full h-2">
                         <div
-                          className="dark:bg-stone-700 bg-stone-400 h-2 rounded-full transition-all duration-500"
-                          style={{ width: `${framework.skill}%` }}
+                          className="bg-violet-500 h-2 rounded-full transition-all duration-500"
+                          style={{ width: `${ecosystem.skill}%` }}
                         />
                       </div>
                     </div>

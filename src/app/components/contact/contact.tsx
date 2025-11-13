@@ -29,7 +29,9 @@ const Contact = () => {
           <input
             type="text"
             name="name"
+            id="name"
             placeholder="Name"
+            autoComplete="false"
             className="p-2 bg-transparent border-2 rounded-md mb-4"
           />
           <label htmlFor="email" className="text-xl pb-1">
@@ -38,21 +40,25 @@ const Contact = () => {
           <input
             type="email"
             name="email"
+            id="email"
             placeholder="Email"
+            autoComplete="false"
             className="p-2 bg-transparent border-2 rounded-md mb-4"
           />
-          <label htmlFor="Message" className="text-xl pb-1">
+          <label htmlFor="message" className="text-xl pb-1">
             Message:{" "}
           </label>
           <textarea
             name="message"
+            id="message"
             placeholder="Message..."
             rows={10}
+            autoComplete="false"
             className="p-2 mb-4 bg-transparent border-2 rounded-md"
           />
           <button
             type="submit"
-            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-white dark:text-stone-900 bg-stone-900 dark:bg-white"
+            className="cursor-pointer inline-block px-12 py-3 w-max text-base font-medium rounded-md mx-auto text-black bg-violet-400 hover:bg-violet-500"
           >
             Get in touch
           </button>

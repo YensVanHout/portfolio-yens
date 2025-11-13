@@ -22,7 +22,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           {stack.map((item) => {
             return (
               <span
-                className="inline-block px-2 py-1 font-semibold border-2 rounded-md bg-stone-900 dark:bg-white text-white dark:text-stone-900"
+                className="inline-block px-2 py-1 font-semibold border-2 border-violet-500 rounded-md bg-violet-400 text-black"
                 key={`"stack-"${item}`}
               >
                 {item}
@@ -31,11 +31,11 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           })}{" "}
         </p>
       </div>
-      <div className="w-full p-4 border-t-2 dark:border-white flex justify-around font-semibold bg-white relative bottom-0">
+      <div className="w-full p-4 border-t-2 dark:border-white flex justify-around font-semibold bg-black dark:bg-white relative bottom-0">
         {links.github ? (
           <Link
             aria-label="Link to the GitHub repository of the project"
-            className="hover:underline text-stone-900"
+            className="hover:underline text-white dark:text-stone-900"
             target="_blank"
             href={links.github}
           >
@@ -45,7 +45,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
         {links.website ? (
           <Link
             aria-label="Link to the website of the project"
-            className="hover:underline text-stone-900"
+            className="hover:underline text-white dark:text-stone-900"
             target="_blank"
             href={links.website}
           >
