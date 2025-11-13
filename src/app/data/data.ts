@@ -65,24 +65,54 @@ export const timeline = [
 ];
 
 export const skills = {
-  languages: [
+  skills: [
     {
       name: "HTML/CSS/JS/TS",
       skill: 80,
       ecosystems: [
-        { name: "VueJS", skill: 75 },
-        { name: "ReactJS", skill: 65 },
+        { name: "VueJS", skill: 65 },
+        { name: "ReactJS", skill: 75 },
       ],
     },
-    { name: "Python", skill: 50 },
-    { name: "C#", skill: 40 },
+    { name: "Go", skill: 40 },
     {
       name: "Java",
-      skill: 60,
+      skill: 80,
       ecosystems: [
-        { name: "Spring Boot", skill: 60 },
-        { name: "JPA", altText: "Hibernate", skill: 55 },
+        { name: "Spring Boot", skill: 75 },
+        { name: "JPA", altText: "Hibernate", skill: 70 },
+        { name: "JUnit", skill: 65 },
+        { name: "Mockito", skill: 60 },
+        { name: "Jenkins", skill: 65 },
       ],
+    },
+    {
+      name: "Other Skills",
+      categories: [
+        {
+          title: "Operating Systems",
+          ecosystems: [
+            { name: "Linux", skill: 75 },
+            { name: "Windows", skill: 80 },
+          ],
+        },
+        {
+          title: "Tools",
+          ecosystems: [
+            { name: "Git", skill: 65 },
+            { name: "Docker", skill: 40 },
+          ],
+        },
+        {
+          title: "Hard skills",
+          ecosystems: [
+            { name: "Scrum", skill: false },
+            { name: "Agile", skill: false },
+            { name: "Kanban", skill: false },
+          ],
+        },
+      ],
+      skill: false,
     },
   ],
 };
