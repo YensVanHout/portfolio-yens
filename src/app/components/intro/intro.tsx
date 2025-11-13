@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BiDownload } from "react-icons/bi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Title from "../ui/title";
 import Me from "@/assets/me.webp";
 import Image from "next/image";
@@ -61,14 +62,36 @@ const Intro = () => {
               Last updated: {lastCommitDate}
             </p>
           )}
-          <a
-            href="/assets/cv-vanhout-yens.pdf"
-            download="cv-vanhout-yens.pdf"
-            className="inline-flex items-center gap-2 px-6 py-3 mt-4 text-base font-medium rounded-md border-5 border-solid border-violet-400 text-white bg-custom-dark hover:bg-custom-dark/50 dark:bg-white dark:hover:bg-custom-main  dark:text-black transition-colors"
-          >
-            <BiDownload className="text-lg" />
-            Download my CV
-          </a>
+          <div className="flex flex-col items-center gap-4 mt-4">
+            <a
+              href="/assets/cv-vanhout-yens.pdf"
+              download="cv-vanhout-yens.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 text-base font-medium rounded-md border-5 border-solid border-violet-400 text-white bg-custom-dark hover:bg-custom-dark/50 dark:bg-white dark:hover:bg-custom-main  dark:text-black transition-colors"
+            >
+              <BiDownload className="text-lg" />
+              Download my CV
+            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://github.com/YensVanHout"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile of Yens Van Hout"
+                className="text-3xl  text-custom-dark dark:text-custom-main hover:opacity-80 transition-opacity"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yens-van-hout-199478211/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile of Yens Van Hout"
+                className="text-3xl  text-custom-dark dark:text-custom-main hover:opacity-80 transition-opacity"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
           <p className="text-xs md:text-sm max-w-xl my-12 font-bold whitespace-pre-wrap">
             {`I'm Yens, a developer from Antwerp, Belgium.\nI'm ${getAge()} years old and ready to dive into my first professional role.\nLet's build something great together.`}
           </p>
