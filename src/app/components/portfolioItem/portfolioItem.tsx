@@ -31,7 +31,7 @@ const PortfolioItem = ({ title, img, stack, links }: portfolioItemProps) => {
           })}{" "}
         </p>
       </div>
-      <div className="w-full p-4 border-t-2 dark:border-white flex justify-around font-semibold bg-black dark:bg-white relative bottom-0">
+      <div className="w-full p-4 border-t-2 dark:border-white flex justify-around font-semibold bg-custom-dark dark:bg-white relative bottom-0">
         {links.github ? (
           <Link
             aria-label="Link to the GitHub repository of the project"

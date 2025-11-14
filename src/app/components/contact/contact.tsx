@@ -15,6 +15,7 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col mb-10 mx-auto" id="contact">
+      <Title>Contact</Title>
       <div className="flex justify-center items-center">
         <form
           name="contact"
@@ -22,7 +23,6 @@ const Contact = () => {
           className="flex flex-col w-full md:w-9/12"
         >
           <input type="hidden" name="form-name" value="contact" />
-          <Title>Contact</Title>
           <label htmlFor="name" className="text-xl pb-1">
             Name:{" "}
           </label>

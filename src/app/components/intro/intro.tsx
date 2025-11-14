@@ -92,7 +92,7 @@ const Intro = () => {
               </a>
             </div>
           </div>
-          <p className="text-xs md:text-sm max-w-xl my-12 font-bold whitespace-pre-wrap">
+          <p className="text-xs md:text-sm max-w-xl mt-4 mb-12 font-bold whitespace-pre-wrap">
             {`I'm Yens, a developer from Antwerp, Belgium.\nI'm ${getAge()} years old and ready to dive into my first professional role.\nLet's build something great together.`}
           </p>
           <p>Scroll to find out more about me.</p>

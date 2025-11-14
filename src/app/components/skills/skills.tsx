@@ -2,7 +2,7 @@
 import { useState } from "react";
 import type { ReactElement } from "react";
 import { FaJava } from "react-icons/fa";
-import { SiJavascript, SiPython } from "react-icons/si";
+import { SiTypescript, SiPython } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { BiChevronDown } from "react-icons/bi";
 import { skills, currentlyLearning } from "../../data/data";
@@ -10,7 +10,7 @@ import Title from "../ui/title";
 
 const getLanguageIcon = (languageName: string) => {
   const iconMap: { [key: string]: ReactElement } = {
-    "HTML/CSS/JS/TS": <SiJavascript className="text-yellow-400" />,
+    "HTML/CSS/JS/TS": <SiTypescript className="text-sky-600" />,
     Python: <SiPython className="text-blue-400" />,
     Go: <FaGolang className="text-cyan-700 scale-125" />,
     Java: <FaJava className="text-red-500" />,
@@ -93,7 +93,7 @@ const Skills = () => {
                       : "max-h-0 opacity-0 mt-0"
                   }`}
                 >
-                  <div className="pl-4 border-l-2 dark:border-custom-main border-custom-main">
+                  <div className="pl-4 border-l-2 dark:border-stone-400 border-custom-main">
                     {skill.categories ? (
                       // Render categories for "Other Skills"
                       <div className="flex flex-col gap-6">
