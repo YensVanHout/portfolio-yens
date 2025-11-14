@@ -13,7 +13,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col mb-10 mx-auto" id="contact">
+    <div className="flex flex-col mx-auto md:pt-20" id="contact">
       <Title>Contact</Title>
       <div className="flex justify-center items-center">
         <form

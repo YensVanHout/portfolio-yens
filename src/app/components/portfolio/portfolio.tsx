@@ -4,7 +4,7 @@ import Title from "../ui/title";
 
 const Portfolio = () => {
   return (
-    <div id="projects" className="min-h-screen md:pt-20 mb-20">
+    <div id="projects" className="min-h-screen md:pt-20">
       <Title styling="py-8">Projects</Title>
       <div className="flex flex-col md:flex-row items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

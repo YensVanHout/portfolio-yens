@@ -32,7 +32,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="min-h-screen md:pt-20 pb-20">
+    <div id="skills" className="min-h-screen md:pt-20">
       <Title>Skills</Title>
       <div className="flex flex-col gap-8">
         {skills.skills.map((skill, index) => {
