@@ -36,7 +36,7 @@ const Skills = () => {
       <Title>Skills</Title>
       <div className="flex flex-col gap-8">
         {skills.skills.map((skill, index) => {
-          const isCollapsible = index === 3; // Only the 4th skill (index 3) is collapsible
+          const isCollapsible = index === 3;
           const isExpanded = expandedSkills.has(index);
           const showEcosystems = !isCollapsible || isExpanded;
           const hasEcosystems =
@@ -95,7 +95,6 @@ const Skills = () => {
                 >
                   <div className="pl-4 border-l-2 dark:border-stone-400 border-custom-main">
                     {skill.categories ? (
-                      // Render categories for "Other Skills"
                       <div className="flex flex-col gap-6">
                         {skill.categories.map((category, catIndex) => (
                           <div
@@ -127,7 +126,6 @@ const Skills = () => {
                         ))}
                       </div>
                     ) : (
-                      // Render regular ecosystems for other skills
                       <>
                         {skill.subtitle && (
                           <h4 className="text-sm font-semibold dark:text-stone-700 text-custom-main mb-3 uppercase tracking-wide">

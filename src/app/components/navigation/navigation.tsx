@@ -10,7 +10,6 @@ const Navigation = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    // This code runs only on the client side
     setWindowWidth(window.innerWidth);
 
     function handleResize() {
@@ -24,30 +23,38 @@ const Navigation = () => {
     };
   }, []);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
+
+    const currentWidth = windowWidth || window.innerWidth;
+    const isMobile = currentWidth < 768;
+    const isHome = targetId === "home";
+
+    if (isMobile && isHome) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
+
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      // Find the title element within the section (h1 with Title styling)
       const titleElement = targetElement.querySelector("h1");
       const scrollTarget = titleElement || targetElement;
 
-      // Calculate offset based on navigation position
-      // Desktop: top-4 (16px) + h-[80px] (80px) = 96px
-      // Add extra spacing (24px) to ensure consistent distance from navigation to title
-      // Mobile: bottom-0, so we use a smaller offset
-      // Use window.innerWidth as fallback if windowWidth state hasn't initialized
-      const currentWidth = windowWidth || window.innerWidth;
-      const isMobile = currentWidth < 768;
-      const offset = isMobile ? 20 : 120; // 120px for desktop (96px nav + 24px spacing), 20px for mobile
+      const offset = isMobile ? 20 : 120;
 
       const elementPosition = scrollTarget.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
       window.scrollTo({
-        top: Math.max(0, offsetPosition), // Ensure we don't scroll to negative position
+        top: Math.max(0, offsetPosition),
         behavior: "smooth",
       });
     }

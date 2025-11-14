@@ -42,7 +42,6 @@ const Intro = () => {
       })
       .catch((error) => {
         console.error("Error fetching date:", error);
-        // Fallback to the static date from data.ts
       });
   }, []);
 
