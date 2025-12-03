@@ -78,10 +78,10 @@ export const timeline = [
   },
   {
     year: "2025 - Present",
-    title: "Freelance Developer",
+    title: "Looking for a job as a Full Stack Developer",
     duration: "Present",
     details:
-      "I have looking for jobs as a freelance developer. I have worked on projects using various technologies such as Java, Spring Boot, JPA, ReactJS and VueJS.",
+      "I have looking for jobs as a Full Stack Developer. I have worked on projects using various technologies such as Java, Spring Boot, JPA, ReactJS and VueJS.",
   },
 ];
 
